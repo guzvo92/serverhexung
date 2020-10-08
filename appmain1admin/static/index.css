@@ -63,23 +63,20 @@
 	        #s4-sm{display:none;}
 	        #s4-md{display:block;}
 	        .paralaxban{height:230px}
-					#allmysteries-sm{display:none;}
-					#allmysteries-md{display:block;}
+
 	    }
-	    /* Medidas arriba de la laptop */
+
+			/* Medidas arriba de la laptop */
 	    @media (min-width:1400px) {
-				#includes{display:none}
-				#warning{display:block}
 				.charlog{font-size:12px}
 
 	    }
 
 			 /*Todas las Medidas abajo de la laptop */
 			@media (max-width:1399px){
-				#includes{display:block}
-				#warning{display:none}
 				.charlog{font-size:14px}
 		 }
+
 
 	/********************* idx2 - main banner */
 

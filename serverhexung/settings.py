@@ -25,8 +25,8 @@ SECRET_KEY = 'k(-st0eq6nv7c*d8i$mk=6@(_lg-b^sl9ibaxy+#+-s%@xup2%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-#ALLOWED_HOSTS = ["hexung.co","www.hexung.co","localhost"]
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["hexung.co","www.hexung.co","localhost"]
+#ALLOWED_HOSTS = ["*"]
 
 # Application definition
 

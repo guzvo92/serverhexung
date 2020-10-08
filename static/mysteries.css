@@ -33,12 +33,11 @@
 	    }
 	    /* Medidas arriba de la laptop */
 	    @media (min-width:1400px) {
-				#includes{display:none}
-				#warning{display:block}
+				#allmysteries-sm{display:none;}
+				#allmysteries-md{display:block;}
 	    }
 
 			 /*Todas las Medidas abajo de la laptop */
 			@media (max-width:1399px){
-				#includes{display:block}
-				#warning{display:none}
+
 		 }
