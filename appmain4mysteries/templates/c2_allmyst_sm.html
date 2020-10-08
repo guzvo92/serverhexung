@@ -1,0 +1,56 @@
+{% load static%}
+
+    <style media="screen">
+
+      .item-mystery-sm{
+        width:250px;
+        height:100%;
+        border: px solid blue;
+        margin-left:auto;
+        margin-right:auto;
+      }
+
+      .card{
+        margin-left:auto;
+        margin-right:auto;
+        height:100%;
+      }
+
+    </style>
+
+  <div id="allmysteries-sm" class="container" >
+    <h1 class="text-center">Misterios en curso: </h1>
+    <div class="e30"></div>
+
+
+    <!--misterios lo esta tomando del Mystery.objects.all de la vista-->
+
+
+      {% for misterio in misterios %}
+        <div class="row">
+            <div class="col item-mystery-sm">
+
+              <div class="card">
+                <div class="e10"></div>
+                <img class="mr-auto ml-auto card-img-top" src="{{misterio.image.url}}" >
+                <div class="card-body">
+                  <h5 class="card-title text-center"> #{{forloop.counter}} / {{misterio.title}}</h5>
+                  <span class="text-center"> {{misterio.created_at }} </span>
+                  <p class="card-text">{{misterio.content}}</p>
+                  <a href="#" class="btn btn-primary">Comenta</a>
+                </div>
+              </div>
+
+            </div> <!--end col--->
+        </div> <!--end row--->
+
+        <div class="e30">  </div>
+
+
+
+      {% endfor %}
+
+    <!-----------------------end listado -------------------------->
+
+
+  </div> <!--end container componente--->

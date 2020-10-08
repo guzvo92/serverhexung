@@ -1,0 +1,63 @@
+{% load static%}
+
+<style media="screen">
+
+  td{padding:10px;}
+  .td_content{width:450px}
+  .td_time{width:200px}
+  red{border: 1px solid red}
+</style>
+
+<div class="container red">
+  <div class="row">
+
+    <div class="col">
+      <h4>Nuevo Char:</h4>
+
+      <form class="" action="{%url 'savecharinmatrix'%}"
+      method="post">
+
+        {% csrf_token %}
+        {{ form_chars}}
+
+
+        <input type="submit" value="Guardar">
+      </form>
+    </div>
+
+    <div class="col">
+
+      <div class="col">
+        <h4 class="text-center"> Chars Watchlist:</h4>
+
+        <div class="e30"> </div>
+        <table class="egt">
+
+          <tr class="text-center">
+            <th>Name</th>
+          </tr>
+
+          <!----Char solo es un name aleatoreo podria ser X--->
+          {% for char in charsmatrix %}
+
+          <tr>
+            <td>{{char.id}}</td>
+            <td class="text-center">{{char.name}}</td>
+            <td><a href="{% url 'clearchar' id=char.id %}">Eliminar</a></td>
+          </tr>
+
+          {% endfor %}
+
+          </table>
+
+      </div> <!---End Col -->
+
+    </div> <!--end col de chars display --->
+
+    <div class="col-4"> </div>
+
+
+
+  </div>
+</div>
+<!---------------------------------------------------------------------------->

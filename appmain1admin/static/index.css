@@ -1,0 +1,132 @@
+
+	{%load static%}
+
+	    @media (max-width:640px){
+
+					 #s2-sm{display:block;}
+	         #s3-sm{display:block;}
+	         #s3-md{display:none;}
+	         #s5-sm{display:block;}
+	         #s5-md{display:none;}
+	         #s4-sm{display:block;}
+	         #s4-md{display:none;}
+	         .paralaxban{height:580px}
+				 }
+
+
+	    @media (min-width: 641px) and (max-width:830px){
+
+					 #s2-sm{display:block;}
+
+					#s3-sm{display:block;}
+	        #s3-md{display:none;}
+	         #s5-sm{display:block;}
+	        #s5-md{display:none;}
+					#s4-sm{display:block;}
+	        #s4-md{display:none;}
+	        .paralaxban{height:430px}
+	    }
+
+	    @media (min-width:831px) and (max-width:950px){
+					#s2-sm{display:block;}
+
+	        #s3-sm{display:none;}
+	        #s3-md{display:block;}
+	         #s5-sm{display:none;}
+	        #s5-md{display:block;}
+	         #s4-sm{display:none;}
+	        #s4-md{display:block;}
+	        .paralaxban{height:330px}
+
+
+
+	    }
+	    @media (min-width:951px) and (max-width:1228px){
+					#s2-sm{display:block;}
+
+	        #s3-sm{display:none;}
+	        #s3-md{display:block;}
+	        #s5-sm{display:none;}
+	        #s5-md{display:block;}
+	         #s4-sm{display:none;}
+	        #s4-md{display:block;}
+	        .paralaxban{height:290px}
+
+
+	    }
+	     @media (min-width:1229px) and (max-width:1399px){
+				  #s2-sm{display:block;}
+	        #s3-sm{display:none;}
+	        #s3-md{display:block;}
+	        #s5-sm{display:none;}
+	        #s5-md{display:block;}
+	        #s4-sm{display:none;}
+	        #s4-md{display:block;}
+	        .paralaxban{height:230px}
+					#allmysteries-sm{display:none;}
+					#allmysteries-md{display:block;}
+	    }
+	    /* Medidas arriba de la laptop */
+	    @media (min-width:1400px) {
+				#includes{display:none}
+				#warning{display:block}
+				.charlog{font-size:12px}
+
+	    }
+
+			 /*Todas las Medidas abajo de la laptop */
+			@media (max-width:1399px){
+				#includes{display:block}
+				#warning{display:none}
+				.charlog{font-size:14px}
+		 }
+
+	/********************* idx2 - main banner */
+
+
+
+	/********************* idx3 - Vid Gallery */
+
+	#s3-sm{margin-top:100px;}
+  #s3{height:250px;}
+ 	.vidbox{height:200px;width:300px;}
+
+    /********************* idx4 - paralax */
+
+ 	.paralaxban{
+ 		background-image:url('img/paralax.jpg');
+		background-size:cover;
+		background-attachment: fixed;
+		color:white;
+ 	}
+
+
+
+	   /********************* idx6 - */
+
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 48px;
+    height: 5px;
+    margin: 10px;
+    text-indent: 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 0%;
+    background-color: #ffffff;
+    box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+.carousel-indicators .active {
+    width: 48px;
+    height: 5px;
+    margin: 10px;
+    background-color: #000000;
+}
+
+.carousel-control{
+ position:relative;
+  width:300px;
+  margin:0 auto;
+}

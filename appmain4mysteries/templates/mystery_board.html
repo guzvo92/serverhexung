@@ -1,0 +1,44 @@
+<!--extends para heredar -->
+{% extends 'layout.html' %}
+
+{% load static %}
+
+{% block import %}
+<link rel="stylesheet" href="{% static 'mysteries.css' %}">
+{% endblock %}
+
+{% block title %} Mysteries  {% endblock %}
+
+<!-------------------------------------------------------------------->
+{% block content %}
+
+<div class="e30"></div>
+
+{% include '00_warning.html' %}
+
+<div id="includes">
+
+
+
+<div class="containter-fluid">
+	<div class="row">
+		<div class="col-1"></div>
+
+		<div class="mysteries-container col-10">
+			<h1 class="">Mysteries board </h1>
+			<div class="e10"></div>
+
+			{% include 'c2_allmyst_md.html' %}
+			{% include 'c2_allmyst_sm.html' %}
+
+			<div class="e30"></div>
+
+		</div>  <!--end contenido central board-->
+
+		<div class="col-1"></div>
+
+	</div> <!--!end row container-->
+</div> <!--!end container-->
+
+{% endblock %}
+<!-------------------------------------------------------------------->

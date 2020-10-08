@@ -1,0 +1,33 @@
+<!--extends para heredar -->
+{% extends 'layout.html' %}
+
+{% load static %}
+
+{% block import %}
+
+{% endblock %}
+
+{% block title %} Watch list  {% endblock %}
+
+
+{% block content %}
+
+<div class="e30"></div>
+
+<div class="container-fluid">
+
+	<div class="row">
+
+		<div class="col-md-1"></div>
+		<div class="col-md-10 col-12">
+
+			{% include 'c1_chartable.html' %}
+
+		</div>
+		<div class="col-md-1"></div>
+
+
+	</div>
+</div>
+
+{% endblock %}

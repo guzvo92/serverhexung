@@ -1,0 +1,33 @@
+<!--extends para heredar -->
+{% extends 'layout.html' %}
+
+{% block title %} Admin Gen  {% endblock %}
+
+<!-------------------------------------------------------------------->
+{% block content %}
+
+<div class="e30"></div>
+
+<div class="containter-fluid">
+	<div class="row">
+		<div class="col-1"></div>
+
+		<div class="mysteries-container col-10">
+
+		{% include '09-Dualquery_Compo\00_adminchars.html' %}
+
+		<div class="e30"></div>
+
+		{% include '09-Dualquery_Compo\00_adminmysteries.html' %}
+
+
+
+		</div> <!--end contenido central board-->
+
+		<div class="col-1"></div>
+
+	</div> <!--!end row container-->
+</div> <!--!end container-->
+
+{% endblock %}
+<!-------------------------------------------------------------------->

@@ -1,0 +1,70 @@
+{% load static%}
+
+<style media="screen">
+
+  td{padding:10px;}
+  .td_content{width:450px}
+  .td_time{width:200px}
+</style>
+
+<div class="container">
+  <div class="row">
+
+    <div class="col">
+      <h4>Nuevo Misterio:</h4>
+
+      <form class="" action="{%url 'savemystery'%}"
+      method="post">
+
+        {% csrf_token %}
+        {{ form_mystery}}
+
+
+        <input type="submit" value="Guardar">
+      </form>
+    </div>
+
+    <div class="col-8"> </div>
+
+
+
+  </div>
+</div>
+<!---------------------------------------------------------------------------->
+<div class="container">
+  <div class="row">
+
+    <div class="col">
+      <h4 class="text-center"> Misterios en curso:</h4>
+
+      <div class="e30"> </div>
+      <table class="egt">
+
+        <tr class="text-center">
+          <th>No.</th>
+          <th>Titulo</th>
+          <th>Fecha</th>
+          <th>Contenido</th>
+          <th>Actions</th>
+        </tr>
+
+
+        {% for misterio in misterios %}
+
+        <tr>
+          <td>{{misterio.id}}</td>
+          <td class="text-center">{{misterio.title}}</td>
+          <td class="td_time">{{misterio.created_at }}</td>
+          <td class="td_content">{{misterio.content}}</td>
+          <td><a href="{% url 'clear' id=misterio.id %}">Eliminar</a></td>
+        </tr>
+
+        {% endfor %}
+
+        </table>
+
+    </div> <!---End Col -->
+
+
+  </div>
+</div>

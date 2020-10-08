@@ -1,0 +1,42 @@
+<!--extends para heredar -->
+{% extends 'layout.html' %}
+{%load static%}
+
+{% block import %}
+<link rel="stylesheet" href="{% static 'noctshop.css' %}">
+{% endblock %}
+
+{% block title %} Noctshop  {% endblock %}
+
+<!-------------------------------------------------------------------->
+{% block content %}
+
+{% include '00-general/00_warning.html' %}
+
+<div class="e30"></div>
+
+
+<div od="include" class="containter-fluid">
+
+
+	<div class="row">
+		<div class="col-1"></div>
+
+		<div class="noctshop-container col-10">
+			<h1 class="">Noctshop</h1>
+
+			<div class="e30">	</div>
+
+
+			{% include '09-Dualquery_Compo/5_noctshop1_list_md.html' %}
+
+
+		</div> <!--end contenido central board-->
+
+		<div class="col-1"></div>
+
+	</div> <!--!end row container-->
+</div> <!--!end container-->
+
+{% endblock %}
+<!-------------------------------------------------------------------->

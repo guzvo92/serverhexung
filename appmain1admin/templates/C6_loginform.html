@@ -1,0 +1,56 @@
+<style media="screen">
+  .centrarx{margin-left:auto; margin-right:auto}
+  .red{border: 1px solid red;}
+  .alert{
+    padding:20px;
+    color:white;
+    text-align:center;
+    margin-bottom:10px;
+  }
+  .alertwarning{background:red}
+  .alertsuccess{background:green}
+
+  .divformreg{width:250px; border:2px solid gray}
+  .formreg{width:185px}
+  .regsubmit{margin-top:20px}
+
+
+</style>
+
+{%comment %}
+ Recuerda que a la url donde se vaya a renderizar este componente
+ tienes que pasarle el valor de los fields que viene de form.py
+ NOPUEDES USAR ESTE COMPONENTE ASI TAL CUAL EN GENERAL
+ te hace falta el CONTEXTO DE LAS VIEWS.PY
+{%endcomment %}
+
+{% if messages %}
+  {% for message in messages %}
+  <div class="alert alertwarning">
+    {{message}}
+  </div>
+  {% endfor %}
+{% endif %}
+
+<div class="divformreg ">
+  <h3 class="text-center"> Registro:</h3>
+
+  <form class="formreg centrarx" action="" method="post">
+    {% csrf_token %}
+
+    <label for="username"> Nombre del usuario: </label>
+    <input type="text" name="username" value="">
+
+    <label for="password"> Contraseña </label>
+    <input type="password" name="password" value="">
+
+    <input class="regsubmit" type="submit" name="" value="Login">
+
+  </form>
+
+  <div class=" text-center">
+    <div class=""> No tienes una cuenta?  </div>
+    <a href="/register">Registrate</a>
+  </div>
+
+</div>

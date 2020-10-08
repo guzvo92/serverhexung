@@ -1,0 +1,107 @@
+{% load static%}
+
+    <style media="screen">
+
+      .item-mystery{
+        width:250px;
+        height:100%;
+        border: px solid blue;
+      }
+
+      .card{
+        margin-left:auto;
+        margin-right:auto;
+        height:100%;
+      }
+
+      .card-img-top{
+        height:50px;
+        width:50px;
+      }
+    </style>
+
+  <div id="allmysteries-md" class="container">
+    <div class="e30"></div>
+
+
+    <!--misterios lo esta tomando del Mystery.objects.all de la vista-->
+
+    <div class="row justify-content-around">
+      {% for buyitem in buyitems %}
+
+          {% if forloop.counter <= 4  %}
+            <div class="col item-mystery">
+
+
+              <div class="card">
+                <div class="e10"></div>
+                <img class=" mr-auto ml-auto card-img-top" src=" {{buyitem.image.url}} ">
+                <div class="card-body">
+                <h5 class="card-title text-center"> #{{forloop.counter}} / {{buyitem.title}}</h5>
+                  <span class="text-center"> {{buyitem.created_at }} </span>
+                  <p class="card-text">{{buyitem.content}}</p>
+                  <a href="#" class="btn btn-success ">Comprar</a>
+                </div>
+              </div>
+
+            </div>
+          {% endif %}
+
+      {% endfor %}
+    </div> <!--end row--->
+    <!-----------------------end listado 1-------------------------->
+
+    <div class="e30"></div>
+
+    <div class="row justify-content-around">
+      {% for misterio in misterios %}
+
+          {% if forloop.counter > 4 and forloop.counter <= 8 %}
+            <div class="col item-mystery">
+
+              <div class="card">
+                <div class="e10"></div>
+                <img class=" mr-auto ml-auto card-img-top" src=" {{buyitem.image.url}} ">
+                <div class="card-body">
+                <h5 class="card-title text-center"> #{{forloop.counter}} / {{buyitem.title}}</h5>
+                  <span class="text-center"> {{buyitem.created_at }} </span>
+                  <p class="card-text">{{buyitem.content}}</p>
+                  <a href="#" class="btn btn-primary ">Comenta</a>
+                </div>
+              </div>
+
+            </div>
+          {% endif %}
+
+      {% endfor %}
+    </div> <!--end row--->
+    <!-----------------------end listado 2-------------------------->
+
+    <div class="e30"></div>
+
+    <div class="row justify-content-around">
+      {% for misterio in misterios %}
+
+          {% if forloop.counter > 8 and forloop.counter <= 12 %}
+
+            <div class="col item-mystery">
+
+              <div class="card">
+                <div class="e10"></div>
+                <img class=" mr-auto ml-auto card-img-top" src=" {{buyitem.image.url}} ">
+                <div class="card-body">
+                <h5 class="card-title text-center"> #{{forloop.counter}} / {{buyitem.title}}</h5>
+                  <span class="text-center"> {{buyitem.created_at }} </span>
+                  <p class="card-text">{{buyitem.content}}</p>
+                  <a href="#" class="btn btn-primary ">Comenta</a>
+                </div>
+              </div>
+
+            </div>
+          {% endif %}
+
+      {% endfor %}
+    </div> <!--end row--->
+    <!-----------------------end listado 3-------------------------->
+
+  </div> <!--end container componente--->

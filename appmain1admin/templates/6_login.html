@@ -1,0 +1,38 @@
+-<!--extends para heredar -->
+{% extends 'layout.html' %}
+{%load static%}
+
+{% block import %}
+
+{% endblock %}
+
+<!---HEREDANDO CONTEXTO--->
+{% block title %} {{title}}  {% endblock %}
+
+<!-------------------------------------------------------------------->
+{% block content %}
+
+<h1> Login </h1>
+
+<div class="container-fluid">
+  <div class="e30"> </div>
+
+
+  <div class="row">
+
+    <div class="col-md-1"></div>
+
+
+    <div class="col-md">
+      {% include '00-general/C6_loginform.html' %}
+    </div>
+
+
+    <div class="col-md-1"></div>
+
+  </div>
+</div>
+
+
+{% endblock %}
+<!-------------------------------------------------------------------->

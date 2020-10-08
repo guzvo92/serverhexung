@@ -1,0 +1,78 @@
+{% load static %}
+
+<style media="screen">
+
+  @media (max-width:640px){
+		th,td{font-size:9px;padding:7px !important;}
+    .thcharname{width:10px}
+	}
+
+	@media (min-width: 641px) and (max-width:830px){
+		th,td{font-size:9px; padding:7px; !important;}
+    .thcharname{width:10px}
+	}
+
+	@media (min-width:831px) and (max-width:950px){
+		th,td{font-size:18px}
+
+
+	}
+	@media (min-width:951px) and (max-width:1228px){
+		th,td{font-size:18px}
+
+
+	}
+	 @media (min-width:1229px) and (max-width:1399px){
+		 th,td{font-size:18px}
+
+	}
+
+	.btn {margin-top:-5px}
+	.input30{width:90px}
+
+
+
+</style>
+
+  <h1 class=""> Watch list </h1>
+  <div class="e10"></div>
+
+  <form class="formkey" action="{%url 'webkeywatch'%}" method="POST">
+    {% csrf_token %}
+    <input class="input30" name="webkeywatch" placeholder="ADM-PASS"> </input>
+    <button class="btn btn-outline-info btn-sm" type="submit" name="button">Load</button>
+  </form>
+
+  <div class="e30"></div>
+
+  <table class=
+  "rounded table table-striped table-light">
+    <thead class="thead-dark">
+      <tr>
+        <th class="thcharname" scope="col">Char name</th>
+        <th scope="col">Vocation</th>
+        <th scope="col">Lvl now</th>
+        <th scope="col">Last day</th>
+        <th scope="col">Last week</th>
+        <th scope="col">Last month</th>
+        <th scope="col">Last Update</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      {% for char in charlist %}
+
+      <tr>
+        <th scope="row">{{char.name}}</th>
+        <td>{{char.vocation}}</td>
+        <td>{{char.levelnow}}</td>
+        <td>{{char.levelday}}</td>
+        <td>{{char.levelweek}}</td>
+        <td>{{char.levelmonth}}</td>
+        <td>{{char.lastupdate}}</td>
+      </tr>
+
+      {% endfor %}
+
+    </tbody>
+  </table>
