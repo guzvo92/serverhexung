@@ -8,6 +8,7 @@
     .boxhook2{margin-top:30px} /*para espaciado responsivo*/
     .hook2item{height:210px}
     .hook2item_b{height:180px}
+    .contenidohook_subtitulo{ padding: 0px 0px 0px 0px;}
   }
 
   @media (min-width: 641px) and (max-width:830px){
@@ -15,6 +16,7 @@
     .boxhook2{margin-top:30px}
     .hook2item{height:190px}
     .hook2item_b{height:180px}
+    .contenidohook_subtitulo{ padding: 0px 0px 0px 0px;}
 
   }
 
@@ -23,6 +25,7 @@
     .boxhook2{margin-top:30px}
     .hook2item{height:140px}
     .hook2item_b{height:140px}
+    .contenidohook_subtitulo{ padding: 0px 0px 0px 0px;}
   }
 
   @media (min-width:1000px) and (max-width:1228px){
@@ -30,6 +33,7 @@
     .boxhook2{margin-top:0px}
     .hook2item{height:140px}
     .hook2item_b{height:140px}
+    .contenidohook_subtitulo{ padding: 0px 100px 0px 100px;}
 
   }
 
@@ -38,6 +42,7 @@
     .boxhook2{margin-top:0px}
     .hook2item{height:140px}
     .hook2item_b{height:140px}
+    .contenidohook_subtitulo{ padding: 0px 100px 0px 100px;}
   }
 
   @media (min-width:1400px) { /* Medidas arriba de la laptop */
@@ -45,13 +50,14 @@
     .boxhook2{margin-top:0px}
     .hook2item{height:140px}
     .hook2item_b{height:140px}
+    .contenidohook_subtitulo{ padding: 0px 100px 0px 100px;}
   }
 
   #hookinfosection{ background-color: #edf1ff !important;}
   #contenidohook{color:black;}
 
-
   h4{font-family:'Montserrat'}
+  .contenidohook_subtitulo{ color: #666;}
 
   .imghookcharbox{
     height:50px;
@@ -83,13 +89,28 @@
 
 
   .hook_Main_imgitem{
-    margin-top:auto;
-    margin-bottom: auto;
+
   }
 
   .box_imgitem:hover{transform:scale(1.05,1.05); box-shadow: 0 10px 20px rgba(0,0,0,.30);}
   .box_imgitem{transition: transform 200ms;}
 
+  .boxtext_subtext{
+    color: #666;
+    font-family: 'Montserrat';
+    font-size:13px;
+  }
+
+  .boxtext_info{
+    color: #666;
+    font-family: 'Montserrat';
+    font-size:12px;
+    padding-top:10px;
+    transition: transform 200ms;
+  }
+
+  .boxtext_info:hover{color:blue;}
+  a.boxtext_info {text-decoration: none;}
 
   .box_imgitem{
     box-shadow: 0 6px 20px rgba(0,0,0,.07);
@@ -113,7 +134,7 @@
   .img_imgitem2{background-image: url("{%static 'img/hookinfo/iconlist.svg'%}");}
   .img_imgitem3{background-image: url("{%static 'img/hookinfo/iconcom.svg'%}");}
 
-  .box_text{}
+  .boxtext{}
 
 </style>
 
@@ -124,7 +145,7 @@
   <div id="contenidohook" class="container">
     <div class="text-center"> <h3>   Servidor en tiempo real. </h3></div>
     <div class="e20"></div>
-    <div class="text-center"> <h6>
+    <div class="text-center contenidohook_subtitulo"> <h6>
        Software para la administración, comunicación y seguimiento de guilds.
        En primer lugar, permite que tu organizacion administre de manera eficiente sus recursos.
        También, agiliza la toma de decisiones y monitorea a los miembros mas activos.
@@ -227,21 +248,24 @@
           <div class="row">
 
             <div class="col-5 col-lg-4">
-              <div class="hook_Main_imgitem ">
+              <a href="#">
                 <div class="box_imgitem rounded-circle">
                   <div class="img_imgitem">
-
                     <img class=""src="{%static 'img/hookinfo/iconadmin.svg'%}" alt="">
-
                   </div>
                 </div>
-              </div>
-            </div>
+              </a>
+            </div> <!---end seccion imagen circulo-->
+
             <div class="col-7 col-lg-8 ">
-              <div class="box_text">
+              <div class="boxtext">
                 <div class="e10"></div>
                 <h4> Gestión personalizada </h4>
-                Controla mediante el panel gestor, el contenido, imagenes, publicaciones y comentarios del sitio.
+                <span class ="boxtext_subtext">
+                  Controla mediante el panel gestor, el contenido,
+                  imagenes, publicaciones y comentarios del sitio.
+                </span>
+                <p> <a class="boxtext_info" href="/"> Mas info </a> </p>
               </div>
             </div>
 
@@ -252,21 +276,24 @@
           <div class="row">
 
             <div class="col-5 col-lg-4">
-              <div class="hook_Main_imgitem ">
+              <a href="#">
                 <div class="box_imgitem rounded-circle">
                   <div class="img_imgitem">
-
                     <img class=""src="{%static 'img/hookinfo/iconlist.svg'%}" alt="">
-
                   </div>
                 </div>
-              </div>
-            </div>
+              </a>
+            </div> <!---end seccion imagen circulo-->
+
             <div class="col-7 col-lg-8">
-              <div class="box_text">
+              <div class="boxtext">
                 <div class="e10"></div>
                 <h4> Guild list </h4>
-                Monitorea en tiempo real el nivel actual, semanal o mensual de cada miembro de tu guild.
+                <span class ="boxtext_subtext">
+                  Monitorea en tiempo real el nivel actual,
+                  semanal o mensual de cada miembro de tu guild.
+                </span>
+                <p> <a class="boxtext_info" href="/"> Mas info </a> </p>
               </div>
             </div>
 
@@ -277,21 +304,24 @@
           <div class="row">
 
             <div class="col-5 col-lg-4">
-              <div class="hook_Main_imgitem ">
+              <a href="#">
                 <div class="box_imgitem rounded-circle">
                   <div class="img_imgitem">
-
                     <img class=""src="{%static 'img/hookinfo/iconcom.svg'%}" alt="">
-
                   </div>
                 </div>
-              </div>
-            </div>
+              </a>
+            </div> <!---end seccion imagen circulo-->
+
+
             <div class="col-7 col-lg-8 ">
-              <div class="box_text">
+              <div class="boxtext">
                 <div class="e10"></div>
                 <h4> Blog personalizado </h4>
-                Con tu server adquieres un blog para administrar publicaciones entre miembros.
+                <span class ="boxtext_subtext">
+                  Con tu server adquieres un blog para administrar publicaciones entre miembros.
+                </span>
+                <p> <a class="boxtext_info" href="/"> Mas info </a> </p>
               </div>
             </div>
 
