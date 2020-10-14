@@ -4,117 +4,285 @@
 <style media="screen">
 
   @media (max-width:640px){
-    #contenidoparalax{height:490px}
+    #contenidohook{height:1100px}
+    .boxhook2{margin-top:30px} /*para espaciado responsivo*/
   }
   @media (min-width: 641px) and (max-width:830px){
-    #contenidoparalax{height:490px}
+    #contenidohook{height:1100px}
+    .boxhook2{margin-top:30px}
 
   }
   @media (min-width:831px) and (max-width:999px){
-    #contenidoparalax{height:490px}
+    #contenidohook{height:1100px}
+    .boxhook2{margin-top:30px}
   }
   @media (min-width:1000px) and (max-width:1228px){
-    #contenidoparalax{height:250px}
+    #contenidohook{height:600px}
+    .boxhook2{margin-top:0px}
 
   }
   @media (min-width:1229px) and (max-width:1399px){
-    #contenidoparalax{height:250px}
+    #contenidohook{height:600px}
+    .boxhook2{margin-top:0px}
   }
 
   @media (min-width:1400px) { /* Medidas arriba de la laptop */
-    #contenidoparalax{height:250px}
+    #contenidohook{height:600px}
+    .boxhook2{margin-top:0px}
   }
 
-  #contenidoparalax{
-    color:white;
-  }
+  #hookinfosection{ background-color: #edf1ff !important;}
+  #contenidohook{color:black;}
 
-  .boxhook{
+  h4{font-family:'Montserrat'}
 
-
-  }
   .imghookcharbox{
-    background-image: url("{%static 'img/hookinfo/knight-male.gif'%}");
     height:50px;
     background-repeat: no-repeat;
     width:50px;
     margin-left:auto;
     margin-right:auto;
-    padding:50px;
+    padding:30px;
+    padding-top:50px;
+    margin-top:20px;
   }
 
-  .hookcharbox{}
+  .imghookcharbox_i1{ background-image: url("{%static 'img/hookinfo/knight-male.gif'%}");}
+  .imghookcharbox_i2{ background-image: url("{%static 'img/hookinfo/druid-female.gif'%}");}
+  .imghookcharbox_i3{ background-image: url("{%static 'img/hookinfo/demhunter-male.gif'%}");}
+  .imghookcharbox_i4{ background-image: url("{%static 'img/hookinfo/hunter-female.gif'%}");}
+  .imghookcharbox_i5{ background-image: url("{%static 'img/hookinfo/nobleman-male.gif'%}");}
+  .imghookcharbox_i6{ background-image: url("{%static 'img/hookinfo/newly-female.gif'%}");}
+  .imghookcharbox_i7{ background-image: url("{%static 'img/hookinfo/oriental-male.gif'%}");}
+  .imghookcharbox_i8{ background-image: url("{%static 'img/hookinfo/pirate-female.gif'%}");}
+  .imghookcharbox_i9{ background-image: url("{%static 'img/hookinfo/wayfarer-male.gif'%}");}
+  .imghookcharbox_i10{ background-image: url("{%static 'img/hookinfo/shaman-female.gif'%}");}
+  .imghookcharbox_i11{ background-image: url("{%static 'img/hookinfo/mage-male.gif'%}");}
+  .imghookcharbox_i12{ background-image: url("{%static 'img/hookinfo/warrior-female.gif'%}");}
+  .imghookcharbox_i13{ background-image: url("{%static 'img/hookinfo/nightmare-male.gif'%}");}
+  .imghookcharbox_i14{ background-image: url("{%static 'img/hookinfo/golden-female.gif'%}");}
+  .imghookcharbox_i15{ background-image: url("{%static 'img/hookinfo/brothood-male.gif'%}");}
+  .imghookcharbox_i16{ background-image: url("{%static 'img/hookinfo/beggar-female.gif'%}");}
 
+  .hook2item{height:140px}
+  .hook_Main_imgitem{
+    margin-top:auto;
+    margin-bottom: auto;
+  }
+
+  .box_imgitem{
+    box-shadow: 0 6px 20px rgba(0,0,0,.07);
+    background-color: #edf1ff;
+    height:120px;
+    width:120px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .img_imgitem{
+    height:50px;
+    width:50px;
+    margin-left:auto;
+    margin-right:auto;
+    top:30px;
+    position:relative;
+  }
+
+  .img_imgitem1{background-image: url("{%static 'img/hookinfo/iconadmin.svg'%}");}
+  .img_imgitem2{background-image: url("{%static 'img/hookinfo/iconlist.svg'%}");}
+  .img_imgitem3{background-image: url("{%static 'img/hookinfo/iconcom.svg'%}");}
+
+  .box_text{}
 
 </style>
 
 <div id="hookinfosection">
-  <div class="text-center"> <h3> Combina la gestión con lo que más te gusta. </h3></div>
-  <div id="contenidoparalax" class="container">
 
+  <div class="e30"></div>
+
+  <div id="contenidohook" class="container">
+    <div class="text-center"> <h3>   Servidor en tiempo real. </h3></div>
+    <div class="e20"></div>
+    <div class="text-center"> <h6>
+       Software para la administración, comunicación y seguridad de guilds.
+       En primer lugar, permite que tu organizacion administre de manera eficiente sus recursos.
+       También, agiliza la toma de decisiones y monitorea a los miembros mas activos.
+     </h6></div>
+    <div class="e30"></div>
     <div class="row">
 
-      <div class="red col-12 col-lg boxhook text-center">
-        <div class="row">
+      <div class=" col-12 col-lg boxhook1 text-center ">
 
-          <div class="col green hookcharbox">
-            <div class="imghookcharbox"></div>
-          </div>
-
-          <div class="col hookcharbox">
-            <div class="imghookcharbox"></div>
-          </div>
-
-          <div class="col green hookcharbox">
-            <div class="imghookcharbox"></div>
-          </div>
-
-        </div><!---endrow-->
-
-        <div class="row">
-
-          <div class="col hookcharbox">
-            <div class="imghookcharbox"></div>
-          </div>
-
-          <div class="col hookcharbox">
-            <div class="imghookcharbox"></div>
-          </div>
-
-          <div class="col hookcharbox">
-            <div class="imghookcharbox"></div>
-          </div>
-
-        </div><!---endrow-->
-
-        <div class="row">
-
-          <div class="col hookcharbox">
-            <div class="imghookcharbox"></div>
-          </div>
-
-          <div class="col hookcharbox">
-            <div class="imghookcharbox"></div>
-          </div>
-
-          <div class="col hookcharbox">
-            <div class="imghookcharbox"></div>
-          </div>
-
-        </div><!---endrow-->
-
-      </div>
-
-      <div class="red col-12 col-lg boxhook text-center">
-
-					<h6>
-
-					</h6>
-
-      </div>
-
-    </div><!-- end row -->
+        <div class="container">
 
 
-  </div> <!-- end section -->
+          <div class="row"> <!---start row1-->
+
+            <div class="col hookcharbox">
+              <div class="imghookcharbox imghookcharbox_i1"></div>
+            </div>
+
+            <div class="col hookcharbox">
+              <div class="imghookcharbox imghookcharbox_i2"></div>
+            </div>
+
+            <div class="col hookcharbox">
+              <div class="imghookcharbox imghookcharbox_i3"></div>
+            </div>
+
+            <div class="col hookcharbox">
+              <div class="imghookcharbox imghookcharbox_i4"></div>
+            </div>
+
+          </div><!---endrow1-->
+
+          <div class="row">  <!---start row2-->
+
+            <div class="col hookcharbox">
+              <div class="imghookcharbox imghookcharbox_i5"></div>
+            </div>
+
+            <div class="col hookcharbox">
+              <div class="imghookcharbox imghookcharbox_i6"></div>
+            </div>
+
+            <div class="col hookcharbox">
+              <div class="imghookcharbox imghookcharbox_i7"></div>
+            </div>
+
+            <div class="col hookcharbox">
+              <div class="imghookcharbox imghookcharbox_i8"></div>
+            </div>
+
+          </div><!---endrow2-->
+
+          <div class="row">  <!---start row3-->
+
+            <div class="col hookcharbox">
+              <div class="imghookcharbox imghookcharbox_i9"></div>
+            </div>
+
+            <div class="col hookcharbox">
+              <div class="imghookcharbox imghookcharbox_i10"></div>
+            </div>
+
+            <div class="col hookcharbox">
+              <div class="imghookcharbox imghookcharbox_i11"></div>
+            </div>
+
+            <div class="col hookcharbox">
+              <div class="imghookcharbox imghookcharbox_i12"></div>
+            </div>
+
+          </div><!---endrow3-->
+
+          <div class="row"> <!---start row4-->
+
+            <div class="col hookcharbox">
+              <div class="imghookcharbox imghookcharbox_i13"></div>
+            </div>
+
+            <div class="col hookcharbox">
+              <div class="imghookcharbox imghookcharbox_i14"></div>
+            </div>
+
+            <div class="col hookcharbox">
+              <div class="imghookcharbox imghookcharbox_i15"></div>
+            </div>
+
+            <div class="col hookcharbox">
+              <div class="imghookcharbox imghookcharbox_i16"></div>
+            </div>
+
+          </div><!---endrow4-->
+
+
+        </div>
+      </div> <!-- end boxhook 1 -->
+
+      <div class=" col-12 col-lg boxhook2">
+
+        <div class=" hook2item container-fluid"> <!---start item1 -->
+          <div class="row">
+
+            <div class="col-4 ">
+              <div class="hook_Main_imgitem ">
+                <div class="box_imgitem rounded-circle">
+                  <div class="img_imgitem">
+
+                    <img class=""src="{%static 'img/hookinfo/iconadmin.svg'%}" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-8 ">
+              <div class="box_text">
+                <div class="e10"></div>
+                <h4> Gestión personalizada </h4>
+                Controla mediante el panel gestor, el contenido, imagenes, publicaciones y comentarios del sitio.
+              </div>
+            </div>
+
+          </div><!---end row-->
+        </div><!---end item1 -->
+
+        <div class=" hook2item container-fluid"> <!---start item1 -->
+          <div class="row">
+
+            <div class="col-4 ">
+              <div class="hook_Main_imgitem ">
+                <div class="box_imgitem rounded-circle">
+                  <div class="img_imgitem">
+
+                    <img class=""src="{%static 'img/hookinfo/iconlist.svg'%}" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-8 ">
+              <div class="box_text">
+                <div class="e10"></div>
+                <h4> Guild list </h4>
+                Monitorea en tiempo real el nivel actual, semanal o mensual de cada miembro de tu guild.
+              </div>
+            </div>
+
+          </div><!---end row-->
+        </div><!---end item1 -->
+
+        <div class=" hook2item container-fluid"> <!---start item1 -->
+          <div class="row">
+
+            <div class="col-4 ">
+              <div class="hook_Main_imgitem ">
+                <div class="box_imgitem rounded-circle">
+                  <div class="img_imgitem">
+
+                    <img class=""src="{%static 'img/hookinfo/iconcom.svg'%}" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-8 ">
+              <div class="box_text">
+                <div class="e10"></div>
+                <h4> Blog personalizado </h4>
+                Con tu server adquieres un blog para administrar publicaciones entre miembros.
+              </div>
+            </div>
+
+          </div><!---end row-->
+        </div><!---end item1 -->
+
+      </div> <!-- end boxhook 2 -->
+
+
+
+  </div> <!-- end row -->
 </div> <!-- End component -->
+
+
+</div>
