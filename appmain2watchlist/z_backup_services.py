@@ -1,9 +1,31 @@
 import requests
 from .models import *
 from .services_singles import *
-from .servicetest import *
 
 ##############################################################################
+#G5
+def examapleloadcharmatrixdata():
+    dataload = []
+
+    chars = Charmatrix.objects.all()
+    count= 0
+    for x in chars:
+        #dataload.insert(count,x.name)
+        dataload.append(x.name)
+        #data.insert(count,x)-- para diccionarios
+        #data.update(count,x)
+        count += 1
+    print("dataload -> " + str(dataload))
+    data.update(dataload)
+    print("data -> " + str(data))
+    #funcionan pero update me agrega elemento 0 en blanco
+
+#diccionario['cursos'][0]#Python /accediendo a un objeto de lista dentro de otra
+#set conjunto de datos no ordenado no puede iterarse
+#lista conjunto ordenado por un index
+#diccionario conjunto sin orden pero con keys
+#data = {'','','','','','','','',''} #este es un set
+#datax = ['0','1','2','3','4','5','6','7','8'] #esta es una lista
 
 data = ['0','1','2','3','4','5','6','7','8'] #esta es una lista
 

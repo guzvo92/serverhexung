@@ -75,64 +75,57 @@ def requestchar(char,modelo):
 #Esta funcion forma la render guild matrix
 def lvlayzer(modelocharsel):
 
-    #saco la hora actual y creo variables para -1dia/-1week/-1month
+    #1/Saca el primer registro de la N-basededatos
+    #E- Manejar excepcion si no hay registros
+    regx = modelocharsel.objects.first()
+    tiempoinicial = regx.created_at
+
+    #saco la hora actual
     tiemponow = (datetime.today()).strftime("%Y-%m-%d %H:%M")
-    #print datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3] #output// 2020-05-04 10:18:32.926
+    #print datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]
+    #output -> 2020-05-04 10:18:32.926
+
     lastday = (datetime.today() - timedelta(hours=24)).strftime("%Y-%m-%d %H:%M")
     lastweek = (datetime.today() - timedelta(days=7)).strftime("%Y-%m-%d %H:%M")
     lastmonth = (datetime.today() - timedelta(days=30)).strftime("%Y-%m-%d %H:%M")
 
-    # todo metodo que use el orm con OBJECTS.FILTER te genera el objeto QUERYSET
-    QuerySetTimeday = modelocharsel.objects.filter(created_at__range=[lastday,tiemponow])
-    QuerySetTimeweek = modelocharsel.objects.filter(created_at__range=[lastweek,tiemponow])
-    QuerySetTimemonth = modelocharsel.objects.filter(created_at__range=[lastmonth,tiemponow])
+    querytimeday = modelocharsel.objects.filter(created_at__range=[lastday,tiemponow])
+    #te lo marca erroneo min(arg) porque no encuentra registros entre hoy y ayer
+    querytimeweek = modelocharsel.objects.filter(created_at__range=[lastweek,tiemponow])
+    querytimemonth = modelocharsel.objects.filter(created_at__range=[lastmonth,tiemponow])
 
-    querylastday = []   #[Q1]
-    querylastweek = []  #[Q2]
-    querylastmonth = [] #[Q3]
+    querylastday = []
+    querylastweek = []
+    querylastmonth = []
 
-    #ERROR del min(arg) es en las variables de abajo no en estos querys
-    #Si no hay objetos simplemente te regresa el Query [Q1/Q2/Q3] VACIOS
-
-    # -------------------------------------------- manejando el dia
-        #De los objetos entre ayer y hoy recorrelos
-        #Saca el lvl Y AÑADELOS en querylastday
-    for y in QuerySetTimeday:
+    #De los objetos entre ayer y hoy recorrelos
+    #Saca el lvl Y plasmalos en querylastday
+    for y in querytimeday:
         querylastday.append(y.level)
+    #Despues saca el menor y el mayor/ Haz la diferenecia
     try:
-        #Saca el menor y el mayor/ Haz la diferenecia
         lvllastday = int(min(querylastday))
         lvltoday = int(max(querylastday))
         lvlday = lvltoday-lvllastday
     except:
         lvlday = 0
-        print("No hay objetos en ultimas 24h")
+        print("excepcionmanejada")
 
-    # -------------------------------------------- manejando la semana
 
-    for y in QuerySetTimeweek:
+    for y in querytimeweek:
         querylastweek.append(y.level)
-    try:
-        lvliniweek = int(min(querylastweek))
-        lvlfinweek = int(max(querylastweek))
-        lvlweek = lvlfinweek-lvliniweek
-        #print(lvlweek)
-    except:
-        lvlweek = 0;
-        print("No hay objetos en la ultima semana")
+    lvliniweek = int(min(querylastweek))
+    lvlfinweek = int(max(querylastweek))
+    lvlweek = lvlfinweek-lvliniweek
+    #print(lvlweek)
 
-    # -------------------------------------------- manejando el mes
-
-    for y in QuerySetTimemonth:
+    for y in querytimemonth:
         querylastmonth.append(y.level)
-    try:
-        lvlini = int(min(querylastmonth))
-        lvlfin = int(max(querylastmonth))
-        lvlmonth = lvlfin-lvlini
-        #print(lvlmonth)
-    except:
-        lvlmonth = 0
-        print("No hay objetos en el ultimo mes")
+    #print(querylastmonth)
+    lvlini = int(min(querylastmonth))
+    lvlfin = int(max(querylastmonth))
+    lvlmonth = lvlfin-lvlini
+    #print(lvlmonth)
 
     query = modelocharsel.objects.all()
     #printeando un atributo de una lista de un listado de objetos
@@ -142,11 +135,11 @@ def lvlayzer(modelocharsel):
     #modelocharsel = es 1 valor(conjunto de objetos) del listado de DBs de HG2
     #se embebe listado de objetos en una variable "query"
     #query[0].name = del listado de objetos de modelocharsel es el name del primer objeto[0]
-    #print("[Analyzer] - " + "{" + str(query[0].name) + "} - " + str(lvliniweek) + "/" + str(lvlfinweek))
+    print("[Analyzer] - " + "{" + str(query[0].name) + "} - " + str(lvliniweek) + "/" + str(lvlfinweek))
 
     #char sacado del query de los objects
     #este mini request es para en el render sacar el lvl actual
-    try: #por si no hay internet
+    try:
         importe_datachar = requestinfochar(namex)
     except:
         importe_datachar = {'name' : "nada" , 'level': 0 }
